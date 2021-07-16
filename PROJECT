@@ -6,4 +6,14 @@ plugins:
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: infrastructure-operator
 repo: github.com/openshift/infrastructure-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: openshift.io
+  group: agent-install
+  kind: AgentServiceConfig
+  path: github.com/openshift/infrastructure-operator/api/v1beta1
+  version: v1beta1
 version: "3"
